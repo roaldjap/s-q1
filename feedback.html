@@ -2,41 +2,52 @@
 <html>
 
  <head>
- <title> Subscribe to our Mailing List</title>
+ <title> Skiddoo - Getting Feedback from you</title>
    <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="feedback.css">
    <script type="text/javascript" src="jquery.js"></script>
    <script type="text/javascript" src="feedback.js"></script>
-   <script type="text/javascript" src="js/bootsrap.min.css"></script>
+   <script type="text/javascript" src="js/bootstrap.min.js"></script>
  </head>
 
  <body>
- 	<div class="container">
-	 	<div class="row">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">  
+        
+        <div class="logo"></div>
 
-			<div id="global-message"></div>
+        <div class="large-box">
+        <div class="form-title">
+          <h1>Let us know what you think.</h1>
+          <h5>Send us an e-mail. we'll reply to you ASAP.</h5>
+        </div>
 
-			<h1>Feedback</h1>
-			<form name='feedback-form' class="form-horizontal" role="form">
-			 	<div class="error-field"></div>
-			 	<div class="form-group">
-				    
-			
-				<input name='firstname' placeholder="First Name">
-				<input name='lastname' placeholder="Last Name">
-				<input type="email" placeholder="Email Address">
+         <div id="global-message"></div>
 
-				<label> Feedback <textarea name="feedback"></textarea></label>
+          <form name='feedback-form'>
 
-				<label><input type="checkbox" name="subscribe"> Subscribe to mailing list</label><br>
-				<div class="contactMeContainer">
-		                	<label><input type="checkbox" name="contact-me" checked> Please contact me</label><br>
-				</div>
-				<input type="submit" name='submit' value="submit">
-				</div>
-			</form>
-		
-		</div>
-	</div>
+            <div class="form-group">
+                <ul class="error-field"></ul>
+                <input class="form-control" name='firstname' placeholder="First Name" required>
+                <input class="form-control" name='lastname' placeholder="Last Name" required>
+                <input class="form-control" type="email" placeholder="Email Address" required>
+                <textarea name="feedback" class="form-control" rows="5" placeholder="Message"></textarea>
+                <br>
+                <label><input type="checkbox" name="subscribe"> Subscribe to mailing list</label><br>
+                <div class="contactMeContainer">
+                   <label><input type="checkbox" name="contact-me" checked> Please contact me</label><br>
+                </div>
+                <input class="btn btn-default btn-block btn-skiddoo" type="submit" name='submit' value="Submit">
+      
+            </div>
+          </form>
+        </div>
+        <hr>
+        <footer>&copy 2010 - 2013 Skiddoo Pty Ltd ABN: 22 141 736 094 LIC: 2TA07611 </footer>
+      </div>
+    </div>
+  </div>
 
  </body>
 
