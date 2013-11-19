@@ -52,13 +52,13 @@
         }
 
         if (name == 'firstname' || name == 'lastname' || name == 'feedback' && $this.val() == '') {
-          $errorField.append($('<div>' + name + ' is required</div>'));
+          $errorField.append($('<li>' + name + ' is required</li>'));
           hasErrors = true;
         }
 
         if (checked) {
           if (name == 'email' && $this.val() == '') {
-            $errorField.append($('<div>Please provide an email so we can contact you</div>'));
+            $errorField.append($('<li>Please provide an email so we can contact you</li>'));
           } 
         }
 
@@ -72,7 +72,7 @@
         fields[name] = $this.val();
         if (!hasErrors) {
           $.ajax('/provide-feedback', {data: {fields: JSON.stringify(fields)}});
-          $('#global-message').html('Thankyou ' + firstname + ' for submitting your feedback.').show();
+          $('#global-message').html('Thank you ' + firstname + ' for submitting your feedback.').show();
         }
       });
       return false;
