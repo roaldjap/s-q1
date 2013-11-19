@@ -54,7 +54,6 @@
       
       //if no errors  
       if($errorField.children().length == 0){
-
         fields = {};
 
         fields.firstname = $firstname;
@@ -64,15 +63,22 @@
 
         //Subscribe must say thank you
         if ($('input[name="subscribe"]').is(':checked')) {
-            $.ajax('/provide-feedback', {data: {fields: JSON.stringify(fields)}});
-            $('#global-message').html('Thank you ' + $firstname + ' for submitting your feedback.').show();   
-            $('#global-message').append('Thank you for subscribing to our mailing list').css({"padding": "10px"});
-        }; 
-
-        $.ajax('/provide-feedback', {data: {fields: JSON.stringify(fields)}});
-        $('#global-message').html('Thank you ' + $firstname + ' for submitting your feedback.').show();       
+          $.ajax({url:'provide-feedback', type:'PUT', data: {fields: JSON.stringify(fields)},
+              success:function (data) {
+                $('#global-message').html('Thank you ' + $firstname + ' for submitting your feedback.').css({"padding": "10px"});   
+                $('#global-message').html('Thank you for subscribing to our mailing list').css({"padding": "10px"});
+              }
+          });
+          
+        }
+        else{
+          //TODO: do not understand here.
+          //$.ajax('/provide-feedback', {data: {fields: JSON.stringify(fields)}});
+          $('#global-message').html('Thank you ' + $firstname + ' for submitting your feedback.').css({"padding": "10px"});     
+        }
+         
+    
       }
-
      
     });    
 
