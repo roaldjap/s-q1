@@ -62,7 +62,7 @@
         fields.email = $email;
         fields.feedback = $feedback;
 
-         //Subscribe must say thank you
+        //Subscribe must say thank you
         if ($('input[name="subscribe"]').is(':checked')) {
             $.ajax('/provide-feedback', {data: {fields: JSON.stringify(fields)}});
             $('#global-message').html('Thank you ' + $firstname + ' for submitting your feedback.').show();   
@@ -72,46 +72,6 @@
         $.ajax('/provide-feedback', {data: {fields: JSON.stringify(fields)}});
         $('#global-message').html('Thank you ' + $firstname + ' for submitting your feedback.').show();       
       }
-      
-    
-     
-      // var hasErrors = false,
-      //     firstname;
-      
-      // $inputs.each(function() {
-      //   var $this = $(this);
-      //   var name = $this.prop('name');
-      //   var fields = {};
-
-      //   if (name == 'firstname') {
-      //     firstname = $this.val();
-      //   }
-
-      //   if (name == 'firstname' || name == 'lastname' || name == 'feedback' && $this.val() == '') {
-      //     $errorField.append($('<li>' + name + ' is required</li>'));
-      //     hasErrors = true;
-      //   }
-
-      //   if (checked) {
-      //     if (name == 'email' && $this.val() == '') {
-      //       $errorField.append($('<li>Please provide an email so we can contact you</li>'));
-      //     } 
-      //   }
-
-      //   if (name == 'subscribe') {
-      //     var checked = $this.prop('checked');
-      //     if (checked) {
-      //       $('#global-message').html('Thank you for subscribing').show();
-      //     }
-      //   }
-
-      //   fields[name] = $this.val();
-      //   if (!hasErrors) {
-      //     $.ajax('/provide-feedback', {data: {fields: JSON.stringify(fields)}});
-      //     $('#global-message').html('Thank you ' + firstname + ' for submitting your feedback.').show();
-      //   }
-      // });
-      // return false;
 
      
     });    
