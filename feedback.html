@@ -2,27 +2,41 @@
 <html>
 
  <head>
+ <title> Subscribe to our Mailing List</title>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
    <script type="text/javascript" src="jquery.js"></script>
    <script type="text/javascript" src="feedback.js"></script>
+   <script type="text/javascript" src="js/bootsrap.min.css"></script>
  </head>
 
  <body>
-	<div id="global-message" style="display: none"></div>
-	<h1>Feedback</h1>
-	<form name='feedback-form'>
-	 	<div class="error-field"></div>
-		<label>Firstname <input name='firstname'></label>
-		<label>Lastname <input name='lastname'></label><br>
-		<label>Email <input type="email"></label><br/>
-		<label style="vertical-align: top"> Feedback <textarea name="feedback" rows="20" cols="50"></textarea></label>
+ 	<div class="container">
+	 	<div class="row">
+
+			<div id="global-message"></div>
+
+			<h1>Feedback</h1>
+			<form name='feedback-form' class="form-horizontal" role="form">
+			 	<div class="error-field"></div>
+			 	<div class="form-group">
+				    
+			
+				<input name='firstname' placeholder="First Name">
+				<input name='lastname' placeholder="Last Name">
+				<input type="email" placeholder="Email Address">
+
+				<label> Feedback <textarea name="feedback"></textarea></label>
+
+				<label><input type="checkbox" name="subscribe"> Subscribe to mailing list</label><br>
+				<div class="contactMeContainer">
+		                	<label><input type="checkbox" name="contact-me" checked> Please contact me</label><br>
+				</div>
+				<input type="submit" name='submit' value="submit">
+				</div>
+			</form>
 		
-		<br>
-		<label><input type="checkbox" name="subscribe"> Subscribe to mailing list</label><br>
-		<div class="contactMeContainer">
-                	<label><input type="checkbox" name="contact-me" checked> Please contact me</label><br>
 		</div>
-		<input type="submit" name='submit' value="submit">
-	</form>
+	</div>
 
  </body>
 
