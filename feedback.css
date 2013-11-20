@@ -1,7 +1,8 @@
 body{
-    background: url("hk.jpg");
+    background: url("hk.jpg") no-repeat;
     background-position: top center;
     color: #fff;
+    background-color: #00142d;
 }
 
 #global-message{
